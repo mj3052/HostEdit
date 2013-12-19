@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  hostView.h
 //  HostEdit
 //
 //  Created by Mathias Jensen on 19/12/13.
@@ -9,9 +9,6 @@
 #import <Cocoa/Cocoa.h>
 #import "hostsManager.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-
-@property (assign) IBOutlet NSWindow *window;
-@property (nonatomic, strong) NSMutableArray *hosts;
+@interface hostView : NSView
 
 @end

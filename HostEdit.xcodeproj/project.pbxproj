@@ -18,6 +18,11 @@
 		C7534D3318634AB3008BE3CC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7534D1218634AB2008BE3CC /* Cocoa.framework */; };
 		C7534D3B18634AB3008BE3CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7534D3918634AB3008BE3CC /* InfoPlist.strings */; };
 		C7534D3D18634AB3008BE3CC /* HostEditTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7534D3C18634AB3008BE3CC /* HostEditTests.m */; };
+		C7534D4A18634BE1008BE3CC /* hostView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7534D4918634BE1008BE3CC /* hostView.m */; };
+		C7534D4D18634C66008BE3CC /* hostsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7534D4C18634C66008BE3CC /* hostsManager.m */; };
+		C7534D5018634E0B008BE3CC /* hostsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C7534D4F18634E0B008BE3CC /* hostsWindow.m */; };
+		C7534D5618636607008BE3CC /* BLAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = C7534D5518636607008BE3CC /* BLAuthentication.m */; };
+		C7534D581863664B008BE3CC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7534D571863664B008BE3CC /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,15 @@
 		C7534D3818634AB3008BE3CC /* HostEditTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HostEditTests-Info.plist"; sourceTree = "<group>"; };
 		C7534D3A18634AB3008BE3CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C7534D3C18634AB3008BE3CC /* HostEditTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostEditTests.m; sourceTree = "<group>"; };
+		C7534D4818634BE1008BE3CC /* hostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hostView.h; sourceTree = "<group>"; };
+		C7534D4918634BE1008BE3CC /* hostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hostView.m; sourceTree = "<group>"; };
+		C7534D4B18634C66008BE3CC /* hostsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hostsManager.h; sourceTree = "<group>"; };
+		C7534D4C18634C66008BE3CC /* hostsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hostsManager.m; sourceTree = "<group>"; };
+		C7534D4E18634E0B008BE3CC /* hostsWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hostsWindow.h; sourceTree = "<group>"; };
+		C7534D4F18634E0B008BE3CC /* hostsWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hostsWindow.m; sourceTree = "<group>"; };
+		C7534D5418636607008BE3CC /* BLAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAuthentication.h; sourceTree = "<group>"; };
+		C7534D5518636607008BE3CC /* BLAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLAuthentication.m; sourceTree = "<group>"; };
+		C7534D571863664B008BE3CC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7534D581863664B008BE3CC /* Security.framework in Frameworks */,
 				C7534D1318634AB2008BE3CC /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +110,7 @@
 		C7534D1118634AB2008BE3CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C7534D571863664B008BE3CC /* Security.framework */,
 				C7534D1218634AB2008BE3CC /* Cocoa.framework */,
 				C7534D3118634AB3008BE3CC /* XCTest.framework */,
 				C7534D1418634AB2008BE3CC /* Other Frameworks */,
@@ -115,11 +131,19 @@
 		C7534D1818634AB2008BE3CC /* HostEdit */ = {
 			isa = PBXGroup;
 			children = (
+				C7534D5418636607008BE3CC /* BLAuthentication.h */,
+				C7534D5518636607008BE3CC /* BLAuthentication.m */,
+				C7534D4E18634E0B008BE3CC /* hostsWindow.h */,
+				C7534D4F18634E0B008BE3CC /* hostsWindow.m */,
 				C7534D2418634AB2008BE3CC /* AppDelegate.h */,
 				C7534D2518634AB2008BE3CC /* AppDelegate.m */,
 				C7534D2718634AB3008BE3CC /* MainMenu.xib */,
 				C7534D2A18634AB3008BE3CC /* Images.xcassets */,
 				C7534D1918634AB2008BE3CC /* Supporting Files */,
+				C7534D4818634BE1008BE3CC /* hostView.h */,
+				C7534D4918634BE1008BE3CC /* hostView.m */,
+				C7534D4B18634C66008BE3CC /* hostsManager.h */,
+				C7534D4C18634C66008BE3CC /* hostsManager.m */,
 			);
 			path = HostEdit;
 			sourceTree = "<group>";
@@ -253,7 +277,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7534D2618634AB2008BE3CC /* AppDelegate.m in Sources */,
+				C7534D4D18634C66008BE3CC /* hostsManager.m in Sources */,
+				C7534D5018634E0B008BE3CC /* hostsWindow.m in Sources */,
 				C7534D1F18634AB2008BE3CC /* main.m in Sources */,
+				C7534D4A18634BE1008BE3CC /* hostView.m in Sources */,
+				C7534D5618636607008BE3CC /* BLAuthentication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
