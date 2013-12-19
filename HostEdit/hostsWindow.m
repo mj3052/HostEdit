@@ -36,10 +36,7 @@
     [_TableView reloadData];
     
     NSMutableArray *hosts = delegate.hosts;
-    
-    
-    
-    [_TableView editColumn:0 row:[hosts count]-1 withEvent:nil select:YES];
+    [_TableView selectRowIndexes:[NSIndexSet indexSetWithIndex:[hosts count]-1] byExtendingSelection:NO];
 }
 
 - (IBAction)deleteClick:(id)sender {
@@ -50,6 +47,7 @@
         AppDelegate *delegate = [[NSApplication sharedApplication] delegate];
         [delegate.hosts removeObjectAtIndex:row];
         [_TableView reloadData];
+        [_TableView selectRowIndexes:[NSIndexSet indexSetWithIndex:[delegate.hosts count]-1] byExtendingSelection:NO];
     }
     
 }
