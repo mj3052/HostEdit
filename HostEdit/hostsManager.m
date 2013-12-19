@@ -23,7 +23,6 @@
             NSString *line = [unparsedHosts objectAtIndex:i];
             
             if(![[line substringToIndex:1]  isEqual: @"#"] && [line length] > 5) {
-                //NSLog(@"%@",line);
                 
                 NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"  +" options:NSRegularExpressionCaseInsensitive error:nil];
                 
@@ -66,7 +65,6 @@
     for (int i = 0; i < [lines count]; i++) {
         file = [file stringByAppendingString:[lines objectAtIndex:i]];
     }
-    NSLog(@"%@", file);
     
     id blTmp = [BLAuthentication sharedInstance];
     
