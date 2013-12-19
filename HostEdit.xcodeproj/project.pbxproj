@@ -88,6 +88,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C73C884518638D1300355AB8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C7534D4E18634E0B008BE3CC /* hostsWindow.h */,
+				C7534D4F18634E0B008BE3CC /* hostsWindow.m */,
+				C7534D4818634BE1008BE3CC /* hostView.h */,
+				C7534D4918634BE1008BE3CC /* hostView.m */,
+				C7534D4B18634C66008BE3CC /* hostsManager.h */,
+				C7534D4C18634C66008BE3CC /* hostsManager.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		C73C884718638D2700355AB8 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				C7534D5418636607008BE3CC /* BLAuthentication.h */,
+				C7534D5518636607008BE3CC /* BLAuthentication.m */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		C73C884818638D3400355AB8 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				C7534D2418634AB2008BE3CC /* AppDelegate.h */,
+				C7534D2518634AB2008BE3CC /* AppDelegate.m */,
+				C7534D2718634AB3008BE3CC /* MainMenu.xib */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
 		C7534D0618634AB2008BE3CC = {
 			isa = PBXGroup;
 			children = (
@@ -131,19 +163,11 @@
 		C7534D1818634AB2008BE3CC /* HostEdit */ = {
 			isa = PBXGroup;
 			children = (
-				C7534D5418636607008BE3CC /* BLAuthentication.h */,
-				C7534D5518636607008BE3CC /* BLAuthentication.m */,
-				C7534D4E18634E0B008BE3CC /* hostsWindow.h */,
-				C7534D4F18634E0B008BE3CC /* hostsWindow.m */,
-				C7534D2418634AB2008BE3CC /* AppDelegate.h */,
-				C7534D2518634AB2008BE3CC /* AppDelegate.m */,
-				C7534D2718634AB3008BE3CC /* MainMenu.xib */,
-				C7534D2A18634AB3008BE3CC /* Images.xcassets */,
+				C73C884818638D3400355AB8 /* Delegate */,
+				C73C884518638D1300355AB8 /* Classes */,
+				C73C884718638D2700355AB8 /* Authentication */,
 				C7534D1918634AB2008BE3CC /* Supporting Files */,
-				C7534D4818634BE1008BE3CC /* hostView.h */,
-				C7534D4918634BE1008BE3CC /* hostView.m */,
-				C7534D4B18634C66008BE3CC /* hostsManager.h */,
-				C7534D4C18634C66008BE3CC /* hostsManager.m */,
+				C7534D2A18634AB3008BE3CC /* Images.xcassets */,
 			);
 			path = HostEdit;
 			sourceTree = "<group>";
