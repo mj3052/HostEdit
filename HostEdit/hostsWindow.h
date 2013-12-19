@@ -15,6 +15,10 @@
 - (IBAction)addClick:(id)sender;
 - (IBAction)deleteClick:(id)sender;
 - (IBAction)refreshClick:(id)sender;
+- (IBAction)menuSave:(id)sender;
+- (IBAction)menuRefresh:(id)sender;
+- (IBAction)menuAddRow:(id)sender;
+- (IBAction)menuDeleteRow:(id)sender;
 @property (weak) IBOutlet NSTableView *TableView;
 
 @property (readwrite) bool tableHasChanged;

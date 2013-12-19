@@ -20,64 +20,35 @@
 }
 
 - (IBAction)saveButtonClick:(id)sender {
-    hostsManager *manager = [[hostsManager alloc] init];
-    AppDelegate *delegate = [[NSApplication sharedApplication] delegate];
-    
-    NSMutableArray *array = delegate.hosts;
-    
-    [manager writeHostsFromArray:array];
+    [self save];
 }
 
 - (IBAction)addClick:(id)sender {
-    _tableHasChanged = YES;
-    AppDelegate *delegate = [[NSApplication sharedApplication] delegate];
-    
-    [delegate.hosts addObject:[NSMutableArray arrayWithObjects:@"ip", @"host", nil]];
-    [_TableView reloadData];
-    
-    NSMutableArray *hosts = delegate.hosts;
-    [_TableView selectRowIndexes:[NSIndexSet indexSetWithIndex:[hosts count]-1] byExtendingSelection:NO];
+    [self addRow];
 }
 
 - (IBAction)deleteClick:(id)sender {
-    _tableHasChanged = YES;
-    NSInteger row = _TableView.selectedRow;
-    [_TableView editColumn:-1 row:-1 withEvent:nil select:NO];
-    if(row != -1) {
-        AppDelegate *delegate = [[NSApplication sharedApplication] delegate];
-        [delegate.hosts removeObjectAtIndex:row];
-        [_TableView reloadData];
-        [_TableView selectRowIndexes:[NSIndexSet indexSetWithIndex:[delegate.hosts count]-1] byExtendingSelection:NO];
-    }
-    
+    [self deleteRow];
 }
 
 - (IBAction)refreshClick:(id)sender {
-    hostsManager *manager = [[hostsManager alloc] init];
-    AppDelegate *delegate = [[NSApplication sharedApplication] delegate];
-    
-    NSMutableArray *refreshedHosts = [manager getHostsAsArray];
-    
-    if(_tableHasChanged) {
-        NSAlert *alert = [[NSAlert alloc] init];
-        [alert addButtonWithTitle:@"Reload"];
-        [alert addButtonWithTitle:@"Cancel"];
-        [alert setMessageText:@"Be careful..."];
-        [alert setInformativeText:@"If you reload changes will be lost."];
-        [alert setAlertStyle:NSWarningAlertStyle];
-        
-        if ([alert runModal] == NSAlertFirstButtonReturn) {
-            delegate.hosts = refreshedHosts;
-            [_TableView reloadData];
-            _tableHasChanged = NO;
-        }
-        
-    } else {
-        delegate.hosts = refreshedHosts;
-        [_TableView reloadData];
-        _tableHasChanged = NO;
-    }
-    
+    [self reload];
+}
+
+- (IBAction)menuSave:(id)sender {
+    [self save];
+}
+
+- (IBAction)menuRefresh:(id)sender {
+    [self reload];
+}
+
+- (IBAction)menuAddRow:(id)sender {
+    [self addRow];
+}
+
+- (IBAction)menuDeleteRow:(id)sender {
+    [self deleteRow];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
@@ -152,7 +123,73 @@
     [_TableView editColumn:column row:row withEvent:nil select:YES];
 }
 
+- (void)save
+{
+    hostsManager *manager = [[hostsManager alloc] init];
+    AppDelegate *delegate = [[NSApplication sharedApplication] delegate];
+    
+    NSMutableArray *array = delegate.hosts;
+    
+    [manager writeHostsFromArray:array];
+}
 
+- (void)addRow
+{
+    _tableHasChanged = YES;
+    AppDelegate *delegate = [[NSApplication sharedApplication] delegate];
+    
+    [delegate.hosts addObject:[NSMutableArray arrayWithObjects:@"ip", @"host", nil]];
+    [_TableView reloadData];
+    
+    NSMutableArray *hosts = delegate.hosts;
+    [_TableView selectRowIndexes:[NSIndexSet indexSetWithIndex:[hosts count]-1] byExtendingSelection:NO];
+    
+    [_TableView scrollToEndOfDocument:nil];
+}
+
+- (void)deleteRow
+{
+    _tableHasChanged = YES;
+    NSInteger row = _TableView.selectedRow;
+    [_TableView editColumn:-1 row:-1 withEvent:nil select:NO];
+    if(row != -1) {
+        AppDelegate *delegate = [[NSApplication sharedApplication] delegate];
+        [delegate.hosts removeObjectAtIndex:row];
+        [_TableView reloadData];
+        [_TableView selectRowIndexes:[NSIndexSet indexSetWithIndex:[delegate.hosts count]-1] byExtendingSelection:NO];
+    }
+    [_TableView scrollToEndOfDocument:nil];
+}
+
+- (void)reload
+{
+    hostsManager *manager = [[hostsManager alloc] init];
+    AppDelegate *delegate = [[NSApplication sharedApplication] delegate];
+    
+    NSMutableArray *refreshedHosts = [manager getHostsAsArray];
+    
+    if(_tableHasChanged) {
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"Reload"];
+        [alert addButtonWithTitle:@"Cancel"];
+        [alert setMessageText:@"Be careful..."];
+        [alert setInformativeText:@"If you reload changes will be lost."];
+        [alert setAlertStyle:NSWarningAlertStyle];
+        
+        if ([alert runModal] == NSAlertFirstButtonReturn) {
+            delegate.hosts = refreshedHosts;
+            [_TableView reloadData];
+            _tableHasChanged = NO;
+        }
+        
+    } else {
+        delegate.hosts = refreshedHosts;
+        [_TableView reloadData];
+        _tableHasChanged = NO;
+    }
+    [_TableView deselectAll:nil];
+    
+}
 
 
 @end
