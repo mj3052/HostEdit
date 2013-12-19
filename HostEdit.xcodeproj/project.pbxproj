@@ -415,6 +415,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HostEdit/HostEdit-Prefix.pch";
 				INFOPLIST_FILE = "HostEdit/HostEdit-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -428,6 +429,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HostEdit/HostEdit-Prefix.pch";
 				INFOPLIST_FILE = "HostEdit/HostEdit-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -492,6 +494,7 @@
 				C7534D4218634AB3008BE3CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7534D4318634AB3008BE3CC /* Build configuration list for PBXNativeTarget "HostEditTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +503,7 @@
 				C7534D4518634AB3008BE3CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
