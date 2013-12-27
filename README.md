@@ -1,5 +1,4 @@
 #HostEdit - Simple hosts editor for OS X
-==================================================
 
 ##Requirements
 
