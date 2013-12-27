@@ -64,6 +64,7 @@
 		C7534D5418636607008BE3CC /* BLAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAuthentication.h; sourceTree = "<group>"; };
 		C7534D5518636607008BE3CC /* BLAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLAuthentication.m; sourceTree = "<group>"; };
 		C7534D571863664B008BE3CC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C7A37AEC186E354B00B52D18 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +124,7 @@
 		C7534D0618634AB2008BE3CC = {
 			isa = PBXGroup;
 			children = (
+				C7A37AEC186E354B00B52D18 /* README.md */,
 				C7534D1818634AB2008BE3CC /* HostEdit */,
 				C7534D3618634AB3008BE3CC /* HostEditTests */,
 				C7534D1118634AB2008BE3CC /* Frameworks */,
