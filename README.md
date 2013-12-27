@@ -2,17 +2,17 @@
 ==================================================
 
 ##Requirements
---------------------------------
+
 - Mac OS X Lion 10.7 or higher
 
 ##Info
--------------------------
+
 HostEdit allows you to quick and easily edit your hosts file in OS X. Useful if you edit your hosts file often.    
     
 To build it you will need an up-to-date version of Xcode. You can also download an already built .app by clicking [here][1]. You can also download it by going to [releases][2].
 
 ##License
-----------------------
+
 Copyright (C) 2013-2014 Mathias Jensen
 
 
