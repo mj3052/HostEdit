@@ -68,16 +68,16 @@
     
     id blTmp = [BLAuthentication sharedInstance];
     
-    NSString *myCommand = @"/bin/cp";
+    NSString *command = @"/bin/cp";
     
     [file writeToFile:@"/tmp/hosts" atomically:YES encoding:NSUTF8StringEncoding error:nil];
     NSArray *para = [[NSArray alloc] initWithObjects:@"/tmp/hosts", @"/etc/hosts", nil];
     
-    [blTmp authenticate:myCommand];
+    [blTmp authenticate:command];
     
-    if([blTmp isAuthenticated:myCommand] == true) {
+    if([blTmp isAuthenticated:command] == true) {
         NSLog(@"Authenticated");
-        [blTmp executeCommandSynced:myCommand withArgs:para];
+        [blTmp executeCommandSynced:command withArgs:para];
         
     } else { NSLog(@"Not Authenticated"); }
     
