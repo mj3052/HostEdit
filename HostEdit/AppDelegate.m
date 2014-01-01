@@ -12,8 +12,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
-    
+
     hostsManager *manager = [[hostsManager alloc] init];
     
     _hosts = [manager getHostsAsArray];

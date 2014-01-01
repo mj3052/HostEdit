@@ -87,9 +87,7 @@
         
         NSLog(@"SetObject");
         AppDelegate *delegate = [[NSApplication sharedApplication] delegate];
-        
-        //NSArray *currentObject = [delegate.hosts objectAtIndex:rowIndex];
-        
+                
         NSMutableArray *newObject = [NSMutableArray array];
 
         if([aTableColumn.identifier  isEqual: @"ip"]) {
