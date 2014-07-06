@@ -22,6 +22,7 @@
 		C7534D5018634E0B008BE3CC /* hostsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C7534D4F18634E0B008BE3CC /* hostsWindow.m */; };
 		C7534D5618636607008BE3CC /* BLAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = C7534D5518636607008BE3CC /* BLAuthentication.m */; };
 		C7534D581863664B008BE3CC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7534D571863664B008BE3CC /* Security.framework */; };
+		C79DF14B1969ECE7005EB3D3 /* MainMenuT.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79DF14A1969ECE7005EB3D3 /* MainMenuT.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +62,9 @@
 		C7534D5418636607008BE3CC /* BLAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAuthentication.h; sourceTree = "<group>"; };
 		C7534D5518636607008BE3CC /* BLAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLAuthentication.m; sourceTree = "<group>"; };
 		C7534D571863664B008BE3CC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C79DF14A1969ECE7005EB3D3 /* MainMenuT.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuT.xib; sourceTree = "<group>"; };
 		C7A37AEC186E354B00B52D18 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		C7BA44B9193F58C7007DEDD0 /* HostEdit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HostEdit-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,7 @@
 				C7534D4F18634E0B008BE3CC /* hostsWindow.m */,
 				C7534D4B18634C66008BE3CC /* hostsManager.h */,
 				C7534D4C18634C66008BE3CC /* hostsManager.m */,
+				C7BA44B9193F58C7007DEDD0 /* HostEdit-Bridging-Header.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -112,6 +116,7 @@
 				C7534D2418634AB2008BE3CC /* AppDelegate.h */,
 				C7534D2518634AB2008BE3CC /* AppDelegate.m */,
 				C7534D2718634AB3008BE3CC /* MainMenu.xib */,
+				C79DF14A1969ECE7005EB3D3 /* MainMenuT.xib */,
 			);
 			name = Delegate;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			files = (
 				C7534D1D18634AB2008BE3CC /* InfoPlist.strings in Resources */,
 				C7534D2B18634AB3008BE3CC /* Images.xcassets in Resources */,
+				C79DF14B1969ECE7005EB3D3 /* MainMenuT.xib in Resources */,
 				C7534D2318634AB2008BE3CC /* Credits.rtf in Resources */,
 				C7534D2918634AB3008BE3CC /* MainMenu.xib in Resources */,
 			);
@@ -431,12 +437,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HostEdit/HostEdit-Prefix.pch";
 				INFOPLIST_FILE = "HostEdit/HostEdit-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HostEdit/HostEdit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -445,12 +455,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HostEdit/HostEdit-Prefix.pch";
 				INFOPLIST_FILE = "HostEdit/HostEdit-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HostEdit/HostEdit-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
