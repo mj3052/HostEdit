@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "hostsManager.h"
+#import "HostsManager.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 

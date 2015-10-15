@@ -8,7 +8,7 @@
 
 #import "hostsWindow.h"
 
-@implementation hostsWindow
+@implementation HostsWindow
 
 - (void)awakeFromNib
 {
@@ -58,7 +58,7 @@
     if([delegatehosts count] != 0) {
         return [delegate.hosts count];
     } else {
-        hostsManager *manager = [[hostsManager alloc] init];
+        HostsManager *manager = [[HostsManager alloc] init];
         
         NSMutableArray *hosts = [manager getHostsAsArray];
         
@@ -123,7 +123,7 @@
 
 - (void)save
 {
-    hostsManager *manager = [[hostsManager alloc] init];
+    HostsManager *manager = [[HostsManager alloc] init];
     AppDelegate *delegate = [[NSApplication sharedApplication] delegate];
     
     NSMutableArray *array = delegate.hosts;
@@ -161,7 +161,7 @@
 
 - (void)reload
 {
-    hostsManager *manager = [[hostsManager alloc] init];
+    HostsManager *manager = [[HostsManager alloc] init];
     AppDelegate *delegate = [[NSApplication sharedApplication] delegate];
     
     NSMutableArray *refreshedHosts = [manager getHostsAsArray];

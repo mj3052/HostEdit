@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Mathias Jensen. All rights reserved.
 //
 
-#import "hostsManager.h"
+#import "HostsManager.h"
 
-@implementation hostsManager
+@implementation HostsManager
 
 
 - (NSMutableArray *)getHostsAsArray

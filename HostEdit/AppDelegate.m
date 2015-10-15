@@ -13,7 +13,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 
-    hostsManager *manager = [[hostsManager alloc] init];
+    HostsManager *manager = [[HostsManager alloc] init];
     
     _hosts = [manager getHostsAsArray];
     
