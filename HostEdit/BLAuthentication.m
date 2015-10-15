@@ -323,6 +323,7 @@
 		args[i] = NULL;
 		
 		const char* dbg = [pathToCommand fileSystemRepresentation];
+
 		err = AuthorizationExecuteWithPrivileges(_authorizationRef,
 												 [pathToCommand fileSystemRepresentation],
 												 kAuthorizationFlagDefaults,
