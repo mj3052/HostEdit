@@ -90,13 +90,13 @@
 		C73C884518638D1300355AB8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C7534D4E18634E0B008BE3CC /* HostsWindow.h */,
-				C7534D4F18634E0B008BE3CC /* HostsWindow.m */,
+				C7BA44B9193F58C7007DEDD0 /* HostEdit-Bridging-Header.h */,
 				C7534D4B18634C66008BE3CC /* HostsManager.h */,
 				C7534D4C18634C66008BE3CC /* HostsManager.m */,
-				C7BA44B9193F58C7007DEDD0 /* HostEdit-Bridging-Header.h */,
+				C7534D4E18634E0B008BE3CC /* HostsWindow.h */,
+				C7534D4F18634E0B008BE3CC /* HostsWindow.m */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		C73C884718638D2700355AB8 /* Authentication */ = {
@@ -105,7 +105,7 @@
 				C7534D5418636607008BE3CC /* BLAuthentication.h */,
 				C7534D5518636607008BE3CC /* BLAuthentication.m */,
 			);
-			name = Authentication;
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		C73C884818638D3400355AB8 /* Delegate */ = {
@@ -115,17 +115,17 @@
 				C7534D2518634AB2008BE3CC /* AppDelegate.m */,
 				C7534D2718634AB3008BE3CC /* MainMenu.xib */,
 			);
-			name = Delegate;
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		C7534D0618634AB2008BE3CC = {
 			isa = PBXGroup;
 			children = (
-				C7A37AEC186E354B00B52D18 /* README.md */,
+				C7534D1118634AB2008BE3CC /* Frameworks */,
 				C7534D1818634AB2008BE3CC /* HostEdit */,
 				C7534D3618634AB3008BE3CC /* HostEditTests */,
-				C7534D1118634AB2008BE3CC /* Frameworks */,
 				C7534D1018634AB2008BE3CC /* Products */,
+				C7A37AEC186E354B00B52D18 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,9 +162,9 @@
 		C7534D1818634AB2008BE3CC /* HostEdit */ = {
 			isa = PBXGroup;
 			children = (
-				C73C884818638D3400355AB8 /* Delegate */,
-				C73C884518638D1300355AB8 /* Classes */,
 				C73C884718638D2700355AB8 /* Authentication */,
+				C73C884518638D1300355AB8 /* Classes */,
+				C73C884818638D3400355AB8 /* Delegate */,
 				C7534D1918634AB2008BE3CC /* Supporting Files */,
 				C7534D2A18634AB3008BE3CC /* Images.xcassets */,
 			);
@@ -174,20 +174,20 @@
 		C7534D1918634AB2008BE3CC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C7534D2118634AB2008BE3CC /* Credits.rtf */,
 				C7534D1A18634AB2008BE3CC /* HostEdit-Info.plist */,
+				C7534D2018634AB2008BE3CC /* HostEdit-Prefix.pch */,
 				C7534D1B18634AB2008BE3CC /* InfoPlist.strings */,
 				C7534D1E18634AB2008BE3CC /* main.m */,
-				C7534D2018634AB2008BE3CC /* HostEdit-Prefix.pch */,
-				C7534D2118634AB2008BE3CC /* Credits.rtf */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		C7534D3618634AB3008BE3CC /* HostEditTests */ = {
 			isa = PBXGroup;
 			children = (
-				C7534D3C18634AB3008BE3CC /* HostEditTests.m */,
 				C7534D3718634AB3008BE3CC /* Supporting Files */,
+				C7534D3C18634AB3008BE3CC /* HostEditTests.m */,
 			);
 			path = HostEditTests;
 			sourceTree = "<group>";
@@ -198,7 +198,7 @@
 				C7534D3818634AB3008BE3CC /* HostEditTests-Info.plist */,
 				C7534D3918634AB3008BE3CC /* InfoPlist.strings */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +332,7 @@
 				C7534D1C18634AB2008BE3CC /* en */,
 			);
 			name = InfoPlist.strings;
+			path = .;
 			sourceTree = "<group>";
 		};
 		C7534D2118634AB2008BE3CC /* Credits.rtf */ = {
@@ -340,6 +341,7 @@
 				C7534D2218634AB2008BE3CC /* en */,
 			);
 			name = Credits.rtf;
+			path = .;
 			sourceTree = "<group>";
 		};
 		C7534D2718634AB3008BE3CC /* MainMenu.xib */ = {
@@ -348,6 +350,7 @@
 				C7534D2818634AB3008BE3CC /* Base */,
 			);
 			name = MainMenu.xib;
+			path = .;
 			sourceTree = "<group>";
 		};
 		C7534D3918634AB3008BE3CC /* InfoPlist.strings */ = {
@@ -356,6 +359,7 @@
 				C7534D3A18634AB3008BE3CC /* en */,
 			);
 			name = InfoPlist.strings;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -437,8 +441,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HostEdit/HostEdit-Prefix.pch";
-				INFOPLIST_FILE = "HostEdit/HostEdit-Info.plist";
+				GCC_PREFIX_HEADER = "HostEdit/Supporting Files/HostEdit-Prefix.pch";
+				INFOPLIST_FILE = "HostEdit/Supporting Files/HostEdit-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Pixolink.${PRODUCT_NAME:rfc1034identifier}";
@@ -456,8 +460,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HostEdit/HostEdit-Prefix.pch";
-				INFOPLIST_FILE = "HostEdit/HostEdit-Info.plist";
+				GCC_PREFIX_HEADER = "HostEdit/Supporting Files/HostEdit-Prefix.pch";
+				INFOPLIST_FILE = "HostEdit/Supporting Files/HostEdit-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Pixolink.${PRODUCT_NAME:rfc1034identifier}";
@@ -477,12 +481,12 @@
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HostEdit/HostEdit-Prefix.pch";
+				GCC_PREFIX_HEADER = "HostEdit/Supporting Files/HostEdit-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "HostEditTests/HostEditTests-Info.plist";
+				INFOPLIST_FILE = "HostEditTests/Supporting Files/HostEditTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Pixolink.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -500,8 +504,8 @@
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HostEdit/HostEdit-Prefix.pch";
-				INFOPLIST_FILE = "HostEditTests/HostEditTests-Info.plist";
+				GCC_PREFIX_HEADER = "HostEdit/Supporting Files/HostEdit-Prefix.pch";
+				INFOPLIST_FILE = "HostEditTests/Supporting Files/HostEditTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Pixolink.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
