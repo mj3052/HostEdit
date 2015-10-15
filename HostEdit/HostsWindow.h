@@ -7,10 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "hostsManager.h"
+#import "HostsManager.h"
 #import "AppDelegate.h"
 
-@interface hostsWindow : NSWindow <NSTableViewDataSource, NSTableViewDelegate>
+@interface HostsWindow : NSWindow <NSTableViewDataSource, NSTableViewDelegate>
 - (IBAction)saveButtonClick:(id)sender;
 - (IBAction)addClick:(id)sender;
 - (IBAction)deleteClick:(id)sender;

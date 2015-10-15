@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BLAuthentication.h"
 
-@interface hostsManager : NSObject
+@interface HostsManager : NSObject
 
 - (NSMutableArray *)getHostsAsArray;
 
